@@ -71,7 +71,6 @@ printId("A101"); // also valid
 
 Union types provide flexibility by allowing variables to hold multiple types, making your code more versatile.
 
-### Intersection Type
 ### Intersection Types
 
 Intersection types in TypeScript allow you to combine multiple types into one. This means that a value of an intersection type will have all the properties and methods of the combined types. Intersection types are useful when you want to merge multiple types into a single type that has all the characteristics of the combined types.
@@ -119,7 +118,6 @@ printEmployeeDetails(employee);
 Intersection types are powerful for creating types that need to satisfy multiple constraints, making your code more flexible and expressive.
 
 ### Literal Types
-### Literal Types
 
 Literal types in TypeScript allow you to specify exact values a variable can hold. These can be string literals, number literals, or boolean literals. Literal types are useful for creating more precise and constrained types.
 
@@ -150,7 +148,6 @@ move("West"); // valid
 
 Literal types provide a way to enforce specific values for variables, making your code more predictable and type-safe.
 
-### Nullable Types
 ### Nullable Types
 
 In TypeScript, nullable types allow you to specify that a variable can hold a value of a certain type or `null` or `undefined`. This is useful when you want to explicitly indicate that a variable might not have a value.
