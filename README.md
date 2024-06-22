@@ -641,7 +641,7 @@ Property decorators are a powerful feature in TypeScript that can help you write
 
 ### 🟢 Cheat Sheet
 
-**Class decorators**
+✔️ **Class decorators**
 
 ```typescript
 function Component(constructor: Function) {
@@ -654,7 +654,7 @@ function Component(constructor: Function) {
 class ProfileComponent {}
 ```
 
-**Parameterized decorators**
+✔️ **Parameterized decorators**
 
 ```typescript
 function Component(value: number) {
@@ -668,7 +668,7 @@ function Component(value: number) {
 class ProfileComponent {}
 ```
 
-**Decorator composition**
+✔️ **Decorator composition**
 
 ```typescript
 // Multiple decorators are applied in reverse order.
@@ -678,7 +678,7 @@ class ProfileComponent {}
 class ProfileComponent {}
 ```
 
-**Method decorators**
+✔️ **Method decorators**
 
 ```typescript
 function Log(target: any, methodName: string, descriptor: PropertyDescriptor) {
@@ -700,7 +700,7 @@ class Person {
 }
 ```
 
-**Accessor decorators**
+✔️ **Accessor decorators**
 
 ```typescript
 function Capitalize(
@@ -720,7 +720,7 @@ class Person {
 }
 ```
 
-**Property decorators**
+✔️ **Property decorators**
 
 ```typescript
 function MinLength(length: number) {
@@ -743,5 +743,29 @@ function MinLength(length: number) {
 class User {
   @MinLength(4)
   password: string;
+}
+```
+
+### 🟢 Exercises
+
+- Create a decorator for adding a sauce to Pizza instances:
+
+```typescript
+@Sauce("pesto")
+class Pizza {}
+```
+
+- In the above example, all instances of the Pizza class should have a **sauce** property set
+  to **pesto**.
+
+### 🟢 Solutions
+
+- Create a decorator for adding a sauce to Pizza instances:
+
+```typescript
+function Sauce(sauce: string) {
+  return (constructor: Function) => {
+    constructor.prototype.sauce = sauce;
+  };
 }
 ```
